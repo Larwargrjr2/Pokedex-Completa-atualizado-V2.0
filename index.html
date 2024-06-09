@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Links -->
+  <link rel="icon" href="./favicons/favicon-16x16.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Script -->
+  <script defer src="./js/script.js"></script>
+
+  <title>Pokédex</title>
+</head>
+<body class="body body-main">
+  
+  <main class="notSelectable main_pokedex">
+    <img src="#" alt="pokemon" class="pokemon_image">
+
+    <h1 class="pokemon_data">
+      <span class="pokemon_number"></span>
+      <span class="pokemon_name"></span>
+    </h1>
+    
+    <h1 class="pokemon_type">
+      <span class="poketype pokemon_type1"></span>
+      <span class="poketype pokemon_type2"></span>
+    </h1>
+
+    <form class="form">
+      <input
+        type="search"
+        class="input_search"
+        placeholder="Name or number"
+        required
+      />
+    </form>
+
+    <div class="buttons">
+      <button class="button btn-prev">Prev &lt;</button>
+      <button class="button btn-next">Next &gt;</button>
+    </div>
+
+    <button class="btn-list"></button>
+
+    <img src="" alt="pokedex" class="pokedex">
+  </main>
+
+  <main class="notSelectable main_list_pokedex" style="display: none;">
+    <div class="backSearch">
+      <div class="backPokedex">
+        <button class="btn-backPokedex">
+          <i class="material-icons">
+            keyboard_backspace
+          </i>
+        </button>
+      </div>
+      <form class="form-list">
+        <input
+          type="search"
+          class="input_search_list"
+          placeholder="Name or number"
+          required
+        />
+      </form>
+    </div>
+    <div class="poke_Cards"></div>
+
+    <div class="modal-container" id="modal_container">
+      <div class="modal">
+        <img src="#" alt="pokemon" class="pokemon_image_modal">
+        <span class="name_modal"></span>
+        <span class="hp_modal"></span>
+        <span class="defense_modal"></span>
+        <span class="attack_modal"></span>
+        
+        <div class="type_height_weight_modal">
+          <div class="types_modal">
+            <span class="type1_modal"></span>
+            <span class="type2_modal"></span>
+            <div class="type_div">
+              <span class="type_span">Type</span>
+            </div>
+          </div>
+          <div class="weight_modal">
+            <span class="weight_pokemon"></span>
+            <div class="weight_div">
+              <span class="weight_span">Weight</span>
+            </div>
+          </div>
+          <div class="height_modal">
+            <span class="height_pokemon"></span>
+            <div class="height_div">
+              <span class="height_span">Height</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar green"></div>
+          <div class="progress-bar red"></div>
+        </div>
+        <button id="close">
+          Close
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
